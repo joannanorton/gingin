@@ -259,9 +259,6 @@ Update CORS headers in `worker/src/index.js`:
 - **Zero Trust**: All authentication happens in Cloudflare Workers
 - **Production Ready**: Code includes error handling, validation, and security measures
 
-## 📄 License
-
-MIT License - See LICENSE file for details
 
 ## 🤝 Contributing
 
