@@ -1,0 +1,46 @@
+# Cloudflare Worker Configuration
+name = "gingin"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# KV Namespace for user storage
+[[kv_namespaces]]
+binding = "USERS_KV"
+id = "e763eb912d364ee6a0ceffc2c4c4ac03"  # Replace with your KV namespace ID
+
+[[kv_namespaces]]
+binding = "RATE_LIMIT_KV"
+id = "1670e0142a9e4cd389715e003b5fb3d1"
+
+# Environment variables (set via wrangler secret put or dashboard)
+# Required secrets:
+# - JWT_SECRET: Secret key for JWT signing
+# - GOOGLE_SHEET_ID: Google Sheets spreadsheet ID
+# - GOOGLE_SERVICE_ACCOUNT_EMAIL: Service account email
+# - GOOGLE_SERVICE_ACCOUNT_KEY: Service account private key (PEM format)
+# - GEMINI_API_KEY: Google Gemini API key
+# - TELEGRAM_BOT_TOKEN: Telegram bot token
+# - TELEGRAM_CHAT_ID: Telegram chat ID for notifications
+
+# Production environment
+[env.production]
+name = "inventory-management-worker-prod"
+
+# Development environment
+[env.development]
+name = "inventory-management-worker-dev"
+
+[observability]
+enabled = false
+head_sampling_rate = 1
+
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+persist = true
+invocation_logs = true
+
+[observability.traces]
+enabled = false
+persist = true
+head_sampling_rate = 1
