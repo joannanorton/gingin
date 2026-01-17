@@ -10,7 +10,7 @@ id = "e763eb912d364ee6a0ceffc2c4c4ac03"  # Replace with your KV namespace ID
 
 [[kv_namespaces]]
 binding = "RATE_LIMIT_KV"
-id = "1670e0142a9e4cd389715e003b5fb3d1"
+id = "c9f785f52f8c4bdba3cd21dea512863c"
 
 # Environment variables (set via wrangler secret put or dashboard)
 # Required secrets:
