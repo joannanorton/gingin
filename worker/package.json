@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "deploy": "cd worker && npx wrangler deploy"
+  },
   "dependencies": {
     "bcrypt": "^6.0.0",
     "bcryptjs": "^2.4.3",
