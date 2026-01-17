@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "deploy": "cd worker && npx wrangler deploy"
+    "deploy": "cd worker && npm install && npx wrangler deploy --env=\"\""
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
